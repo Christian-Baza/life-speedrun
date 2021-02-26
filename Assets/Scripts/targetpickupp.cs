@@ -21,17 +21,12 @@ public class targetpickupp : MonoBehaviour
         if (health <= 0f)
         {
             Die();
-
-            
         }
     }
 
     void Die()
     {
-
-        
         Destroy(gameObject);
-
     }
 
 }
