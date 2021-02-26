@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4687158197901663830}
   - component: {fileID: 4687158197901663825}
   - component: {fileID: 4687158197901663828}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4687158198949502554}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 4687158199383411935}
   - component: {fileID: 4687158199383411934}
   - component: {fileID: 4687158199383411929}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
