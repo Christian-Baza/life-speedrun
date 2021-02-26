@@ -25,7 +25,7 @@ public class targetpickupp : MonoBehaviour
     }
 
     void Die()
-    {
+    {// tar bort objetet
         Destroy(gameObject);
     }
 
