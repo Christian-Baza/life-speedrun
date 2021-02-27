@@ -11,7 +11,7 @@ public class MenuButtons : MonoBehaviour
     }
     public void StartLevel()
     {
-        SceneManager.LoadScene("Level One");
+        SceneManager.LoadScene("LevelOne");
     }
     public void QuitGame()
     {
