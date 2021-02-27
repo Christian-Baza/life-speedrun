@@ -20,6 +20,9 @@ public class pickup : MonoBehaviour
     public Text keystext;
     public int keyamont;
 
+    public Text candelstext;
+    public int candelamont;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,11 +53,20 @@ public class pickup : MonoBehaviour
             {
                 if (hit.transform.name == "key")
                 {
-                    print("please");
+                    
                     
                     keyamont += 1;
                     keystext.text = keyamont.ToString();
                    
+                }
+
+                if (hit.transform.name == "candel")
+                {
+                    print("please");
+
+                    candelamont += 1;
+                    candelstext.text = candelamont.ToString();
+
                 }
 
                 target.takedamage(damagee);
