@@ -13,7 +13,7 @@ public class MenuButtons : MonoBehaviour
     }
     public void StartLevel()
     {
-        SceneManager.LoadScene("LevelOne");
+        SceneManager.LoadScene("Level House");
     }
     public void QuitGame()
     {
