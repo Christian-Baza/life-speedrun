@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
 {
     public float StartTime = 60f;
     public string TimeLeft = "60";
-    public TMP_Text TimeLeftUI;
+    public TMP_Text TimeLeftText;
+    public Image TimeLeftBar;
     float timePassed;
     public GameObject gameOverUI;
     public TMP_Text gameOverText;
@@ -29,7 +30,8 @@ public class GameManager : MonoBehaviour
             TimeLeft = (timePassed - Time.time).ToString("F1") + "s";
             
         }
-        TimeLeftUI.text = TimeLeft;
+        TimeLeftText.text = TimeLeft;
+        TimeLeftBar.fillAmount = (timePassed - Time.time) / StartTime;
     }
     private void EndScene(bool wonGame)
     {
