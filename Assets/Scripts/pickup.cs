@@ -15,7 +15,9 @@ public class pickup : MonoBehaviour
     [SerializeField]
     GameObject key;
 
-    
+
+    public GameObject pickupefect;
+
 
     public Text keystext;
     public int keyamont;
@@ -60,7 +62,10 @@ public class pickup : MonoBehaviour
                     
                     keyamont += 1;
                     keystext.text = keyamont.ToString();
-                   
+                  
+                    GameObject impactgo = Instantiate(pickupefect , hit.point, Quaternion.LookRotation(hit.normal));
+                    Destroy(impactgo, 2f);
+
                 }
 
                 if (hit.transform.name == "candel")
