@@ -23,6 +23,9 @@ public class pickup : MonoBehaviour
     public Text candelstext;
     public int candelamont;
 
+    public Text knifestext;
+    public int knifeamont;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,8 +71,19 @@ public class pickup : MonoBehaviour
                     candelstext.text = candelamont.ToString();
 
                 }
-
-                target.takedamage(damagee);
+                
+                if (hit.transform.name == "knife")
+                {
+                    knifeamont += 1;
+                    knifestext.text = knifeamont.ToString();
+                }
+                if(hit.transform.name == "autlet"&& knifeamont <= 1 )
+                {
+                    print("die");
+                }
+                  
+                    
+                    target.takedamage(damagee);
 
                
             }
