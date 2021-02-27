@@ -12,6 +12,11 @@ public class pickup : MonoBehaviour
     [SerializeField]
     LayerMask mask;
 
+    [SerializeField]
+    GameObject key;
+
+    float keys = 0;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -40,18 +45,36 @@ public class pickup : MonoBehaviour
             targetpickupp target = hit.transform.GetComponent<targetpickupp>();
             if (target != null)
             {
+                if (hit.transform.name == "key")
+                {
+                    print("please");
+                    keys = +1;
+                    print(keys);
+                }
+
                 target.takedamage(damagee);
+
+               
             }
             //  GameObject impactgo = Instantiate(hitefect, hit.point, Quaternion.LookRotation(hit.normal));
             // Destroy(impactgo, 2f);
             //, range, mask
 
 
-         // så vi kan kålla efter specifica object i scenen när vi tar bort något så kan vi ändra en bool som sägjer att vi har den elle inte
-           /*
-            if (GameObject.Find("WhateverItsCalled") = !null)
-             {
-                //det existerar ej
+            // så vi kan kålla efter specifica object i scenen när vi tar bort något så kan vi ändra en bool som sägjer att vi har den elle inte
+
+            
+
+             /*
+            if (key.scene.IsValid())
+            {
+                print("no");
+                // go is an instance of an object that's present in the scene
+            }
+            else
+            {
+                print("yes");
+                // go is an instance of a prefab
             }
             */
         }
