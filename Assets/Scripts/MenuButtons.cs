@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
+    public GameObject[] OpenMenuItems;
+    public GameObject[] CloseMenuItems;
     public void RetryLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -20,5 +22,16 @@ public class MenuButtons : MonoBehaviour
     public void ReturnToMenu()
     {
         SceneManager.LoadScene("MenuScene");
+    }
+    public void OpenMenu()
+    {
+        foreach (GameObject item in OpenMenuItems)
+        {
+            item.SetActive(true);
+        }
+        foreach (GameObject item in CloseMenuItems)
+        {
+            item.SetActive(false);
+        }
     }
 }
