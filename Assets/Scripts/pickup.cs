@@ -15,8 +15,11 @@ public class pickup : MonoBehaviour
     [SerializeField]
     GameObject key;
 
-    float keys = 0;
     
+
+    public Text keystext;
+    public int keyamont;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,8 +51,10 @@ public class pickup : MonoBehaviour
                 if (hit.transform.name == "key")
                 {
                     print("please");
-                    keys = +1;
-                    print(keys);
+                    
+                    keyamont += 1;
+                    keystext.text = keyamont.ToString();
+                   
                 }
 
                 target.takedamage(damagee);
