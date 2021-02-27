@@ -8,7 +8,7 @@ public class pickup : MonoBehaviour
     public float damagee = 100F;
     public Camera fpscam;
     public float range = 60f;
-
+    //mask och hur mycket damagee och range och vart den skutes ifårn
     [SerializeField]
     LayerMask mask;
 
@@ -33,7 +33,7 @@ public class pickup : MonoBehaviour
            
       
     public void pickuupp()
-    {// shot funktioen det jag börjar med är att använda mig av reycast och av miten av min skärm på objektet som jag kollar på och sedan kollar jag igall den har damagete gerjern som jag har på ett anat skritpt som då aktiveras och då gör den 25 skada och raconsen har 50 hp så då tar det två skot för att det ska kuna bli 0 eller mindre och då använder jag skripet som inan jag beskrev att den destoryar och sedna spawnaner en ny när den är borta och jag spawnar också en efekt när jag träfar något med min raycas som då jag använder local rotation som betyder att den efekten kommer bli ritkade bordened på objektets rotation och inte någns anans och sitd tar jag bort den efter 2 sek.
+    {// skapar en ray cast och sedan kollar ifall targeten har ett script på sig som då sedan gör så vi kan läga till damage på det objektet som då vi kan ta bort det objektet
         RaycastHit hit;
         if (Physics.Raycast(fpscam.transform.position, fpscam.transform.forward, out hit,range)){
             Debug.Log(hit.transform.name);
