@@ -7,7 +7,7 @@ public class pickup : MonoBehaviour
 {
     public float damagee = 100F;
     public Camera fpscam;
-    public float range = 60f;
+    public float range = 6f;
     //mask och hur mycket damagee och range och vart den skutes ifårn
     [SerializeField]
     LayerMask mask;
@@ -15,10 +15,18 @@ public class pickup : MonoBehaviour
     [SerializeField]
     GameObject key;
 
-    
+
+    public GameObject pickupefect;
+
 
     public Text keystext;
     public int keyamont;
+
+    public Text candelstext;
+    public int candelamont;
+
+    public Text knifestext;
+    public int knifeamont;
 
     // Start is called before the first frame update
     void Start()
@@ -50,14 +58,38 @@ public class pickup : MonoBehaviour
             {
                 if (hit.transform.name == "key")
                 {
-                    print("please");
+                    
                     
                     keyamont += 1;
                     keystext.text = keyamont.ToString();
-                   
+                  
+                    GameObject impactgo = Instantiate(pickupefect , hit.point, Quaternion.LookRotation(hit.normal));
+                    Destroy(impactgo, 2f);
+
                 }
 
-                target.takedamage(damagee);
+                if (hit.transform.name == "candel")
+                {
+                    print("please");
+
+                    candelamont += 1;
+                    candelstext.text = candelamont.ToString();
+
+                }
+                
+                if (hit.transform.name == "knife")
+                {
+                    knifeamont += 1;
+                    knifestext.text = knifeamont.ToString();
+                }
+               
+                if(hit.transform.name == "autlet"&& knifeamont == 1 )
+                {
+                    print("die");
+                }
+                  
+                    
+                    target.takedamage(damagee);
 
                
             }
