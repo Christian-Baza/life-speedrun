@@ -458,7 +458,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-42216
+  m_Name: pb_Mesh-95438
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -722,8 +722,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   key: {fileID: 1885984747}
+  pickupefect: {fileID: 0}
   keystext: {fileID: 0}
   keyamont: 0
+  candelstext: {fileID: 0}
+  candelamont: 0
+  knifestext: {fileID: 0}
+  knifeamont: 0
 --- !u!1 &1885984747
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,6 +1082,11 @@ PrefabInstance:
       propertyPath: gameOverText
       value: 
       objectReference: {fileID: 2068599380}
+    - target: {fileID: 6037626178130788688, guid: 394477152169f9e41807bc9bccbce136,
+        type: 3}
+      propertyPath: StartTime
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6037626178130788689, guid: 394477152169f9e41807bc9bccbce136,
         type: 3}
       propertyPath: m_LocalPosition.x
