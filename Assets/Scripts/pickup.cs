@@ -45,6 +45,15 @@ public class pickup : MonoBehaviour
             //  GameObject impactgo = Instantiate(hitefect, hit.point, Quaternion.LookRotation(hit.normal));
             // Destroy(impactgo, 2f);
             //, range, mask
+
+
+         // så vi kan kålla efter specifica object i scenen när vi tar bort något så kan vi ändra en bool som sägjer att vi har den elle inte
+           /*
+            if (GameObject.Find("WhateverItsCalled") = !null)
+             {
+                //det existerar ej
+            }
+            */
         }
 
 
