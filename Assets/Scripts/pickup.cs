@@ -7,7 +7,7 @@ public class pickup : MonoBehaviour
 {
     public float damagee = 100F;
     public Camera fpscam;
-    public float range = 60f;
+    public float range = 6f;
     //mask och hur mycket damagee och range och vart den skutes ifårn
     [SerializeField]
     LayerMask mask;
@@ -77,7 +77,8 @@ public class pickup : MonoBehaviour
                     knifeamont += 1;
                     knifestext.text = knifeamont.ToString();
                 }
-                if(hit.transform.name == "autlet"&& knifeamont <= 1 )
+               
+                if(hit.transform.name == "autlet"&& knifeamont == 1 )
                 {
                     print("die");
                 }
