@@ -17,6 +17,7 @@ public class MenuButtons : MonoBehaviour
     }
     public void QuitGame()
     {
+        PlayerPrefs.Save();
         Application.Quit();
     }
     public void ReturnToMenu()
