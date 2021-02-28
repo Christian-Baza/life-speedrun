@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - player
+  - Key
+  - Golden Key
+  - Car Key
+  - Knife
+  - Fork
+  - Candle
   layers:
   - Default
   - TransparentFX

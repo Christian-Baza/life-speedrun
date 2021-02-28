@@ -14,6 +14,18 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverUI;
     public TMP_Text gameOverText;
 
+    public GameObject[] items;/*
+    0: Normal Key
+    1: Golden Key
+    2: Car Key
+    3: Knife
+    4: Fork
+    5: Candle
+    6: Power stones (Jag kallar de Gems i min kod)
+    */public int[] itemsAmount;
+    public TMP_Text hoverText;
+    public GameObject hoverTextObject;
+    
     private void Start()
     {
         timePassed = StartTime + Time.time;
@@ -32,6 +44,28 @@ public class GameManager : MonoBehaviour
         }
         TimeLeftText.text = TimeLeft;
         TimeLeftBar.fillAmount = (timePassed - Time.time) / StartTime;
+
+        for (int i = 0; i < items.Length; i++)
+        {
+            if(itemsAmount[i] > 0)
+            {
+                items[i].SetActive(true);
+                items[i].GetComponentInChildren<TMP_Text>().text = itemsAmount[i].ToString();
+            }
+            else
+            {
+                items[i].SetActive(false);
+            }
+        }
+
+        if (hoverText.text != null && hoverText.text != "")
+        {
+            hoverTextObject.SetActive(true);
+        }
+        else
+        {
+            hoverTextObject.SetActive(false);
+        }
     }
     private void EndScene(bool wonGame)
     {
@@ -40,6 +74,11 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
 
         gameOverText.text = "You didn't make it in time for the leaderboards";
+    }
+
+    public void GainItem(int Item)
+    {
+        itemsAmount[Item] += 1;
     }
     private void Awake()
     {
