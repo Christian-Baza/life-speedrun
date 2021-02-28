@@ -56,6 +56,10 @@ public class pickup : MonoBehaviour
         {
             gameManager.EndScene("You electrocuted yourself");
         }
+        else if (target.ID == 0 && gameManager.itemsAmount[0] >= 1)
+        {
+            target.animator.SetTrigger("Open door");
+        }
     // skapar en ray cast och sedan kollar ifall targeten har ett script på sig som då sedan gör så vi kan läga till damage på det objektet som då vi kan ta bort det objektet
                 //GameObject impactgo = Instantiate(pickupefect , hit.point, Quaternion.LookRotation(hit.normal));
                 //Destroy(impactgo, 2f);

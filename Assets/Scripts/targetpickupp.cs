@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
 public class targetpickupp : MonoBehaviour
 {
     public float health = 100f;
@@ -9,6 +10,7 @@ public class targetpickupp : MonoBehaviour
     public int ID = 0;
     public string hoverText;
     public bool isItem = true;
+    public Animator animator;
     /* Item IDs
     0: Normal Key
     1: Golden Key
