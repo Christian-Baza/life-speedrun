@@ -40,6 +40,10 @@ public class pickup : MonoBehaviour
                 gameManager.hoverText.text = null;
             }
         }
+        else
+        {
+            gameManager.hoverText.text = null;
+        }
         
     }
     
