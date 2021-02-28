@@ -19,13 +19,14 @@ public class targetpickupp : MonoBehaviour
     6: Power stones (Jag kallar de Gems i min kod)
 
     Interactables IDs
-    0: 
-    1: 
-    2: 
-    3: 
-    4: 
-    5: 
-    6: 
+    0: Door
+    1: Basement door
+    2: Car door
+    3: Outlet
+    4: Ritual
+    5: Ritual second stage
+    6: Gauntlet
+    7: Gauntlet second stage
     */
     public void Start()
     {
@@ -41,7 +42,6 @@ public class targetpickupp : MonoBehaviour
             Die();
         }
     }
-
     void Die()
     {// tar bort objetet
         Destroy(gameObject);

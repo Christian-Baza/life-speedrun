@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
         if (timePassed <= Time.time)
         {
             TimeLeft = "0s";
-            EndScene(false);
+            EndScene("You didn't make it in time for the leaderboards");
         }
         else
         {
@@ -67,15 +67,14 @@ public class GameManager : MonoBehaviour
             hoverTextObject.SetActive(false);
         }
     }
-    private void EndScene(bool wonGame)
+    public void EndScene(string gameOverTextString)
     {
         Time.timeScale = 0f;
         gameOverUI.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
 
-        gameOverText.text = "You didn't make it in time for the leaderboards";
+        gameOverText.text = gameOverTextString;
     }
-
     public void GainItem(int Item)
     {
         itemsAmount[Item] += 1;
