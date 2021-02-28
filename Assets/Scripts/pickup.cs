@@ -49,7 +49,7 @@ public class pickup : MonoBehaviour
     public void pickuupp(targetpickupp target)
     {   if (target.isItem == true)
         {
-            gameManager.GainItem(target.itemID);
+            gameManager.GainItem(target.ID);
             target.takedamage(damage);
         }
     // skapar en ray cast och sedan kollar ifall targeten har ett script på sig som då sedan gör så vi kan läga till damage på det objektet som då vi kan ta bort det objektet
