@@ -206,7 +206,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-95060
+  m_Name: pb_Mesh-118024
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -379,7 +379,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-95078
+  m_Name: pb_Mesh-118042
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -905,7 +905,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh73972
+  m_Name: pb_Mesh88660
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1092,29 +1092,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &875053640 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 418616152520464888, guid: b8c0f669d93d81c46a45a9b64cc98d82,
-    type: 3}
-  m_PrefabInstance: {fileID: 214471221}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &875053641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875053640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42f0e797f3179d343be939d39de31ee5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  ID: 3
-  hoverText: You need a fork for this
-  isItem: 0
-  animator: {fileID: 0}
 --- !u!114 &1046307989 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6037626178130788688, guid: 394477152169f9e41807bc9bccbce136,

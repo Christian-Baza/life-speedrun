@@ -24,7 +24,6 @@ public class pickup : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(fpscam.transform.position, fpscam.transform.forward, out hit, range))
         {
-            Debug.Log(hit.transform.name);
             targetpickupp target = hit.transform.GetComponent<targetpickupp>();
             if (target != null)
             {
@@ -58,7 +57,7 @@ public class pickup : MonoBehaviour
         }
         else if (target.ID == 3 && gameManager.itemsAmount[4] >= 1)
         {
-            gameManager.EndScene("You electrocuted yourself");
+            gameManager.EndScene("You electrocuted yourself", 1);
         }
         else if (target.ID == 0 && gameManager.itemsAmount[0] >= 1)
         {

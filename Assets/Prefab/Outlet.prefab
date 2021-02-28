@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7055891067381440518}
   - component: {fileID: 5730123536098142018}
   - component: {fileID: 2095980395789498340}
+  - component: {fileID: 875053641}
   m_Layer: 0
   m_Name: Outlet
   m_TagString: Untagged
@@ -4573,3 +4574,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &875053641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418616152520464888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42f0e797f3179d343be939d39de31ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  ID: 3
+  hoverText: You need a fork for this
+  isItem: 0
+  animator: {fileID: 0}

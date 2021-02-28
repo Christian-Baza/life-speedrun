@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(BoxCollider))]
 public class targetpickupp : MonoBehaviour
 {
     public float health = 100f;
