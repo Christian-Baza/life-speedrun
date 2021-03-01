@@ -45,6 +45,5 @@ public class PlayerMovement : MonoBehaviour
 
         velocity.y += gravity * Time.deltaTime;
 
-        Controls.Move(velocity * Time.deltaTime);
-    }
+        Controls.Move(velocity * Time.deltaTime);    }
 }

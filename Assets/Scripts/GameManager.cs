@@ -31,7 +31,23 @@ public class GameManager : MonoBehaviour
         timePassed = StartTime + Time.time;
     }
     private void Update()
-    {
+    {//DEBUG CODE /*
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            EndScene("Test Ending "+ 1, 1);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            EndScene("Test Ending " + 2, 2);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            EndScene("Test Ending " + 3, 3);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            EndScene("Test Ending " + 4, 4);
+        }//DEBUG CODE */
         if (timePassed <= Time.time)
         {
             TimeLeft = "0s";
@@ -78,7 +94,7 @@ public class GameManager : MonoBehaviour
     }
     public void GainItem(int Item)
     {
-        itemsAmount[Item] += 1;
+        itemsAmount[Item]++;
     }
     private void Awake()
     {
