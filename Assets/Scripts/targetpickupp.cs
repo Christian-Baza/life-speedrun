@@ -12,6 +12,9 @@ public class targetpickupp : MonoBehaviour
     public string hoverText;
     public bool isItem = true;
     public Animator animator;
+    public GameObject[] gameObjects1;
+    public GameObject[] gameObjects2;
+    public GameObject[] gameObjects3;
     /* Item IDs
     0: Normal Key
     1: Golden Key

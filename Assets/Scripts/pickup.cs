@@ -67,9 +67,37 @@ public class pickup : MonoBehaviour
         {
             target.animator.SetTrigger("Open door");
         }
-        else if (target.ID == 5 && gameManager.itemsAmount[5] >= 5)
+        else if (target.ID == 4 && gameManager.itemsAmount[5] >= 4)
         {
-            target.animator.SetTrigger("Open door");
+            gameManager.itemsAmount[5] -= 4;
+            foreach (GameObject item in target.gameObjects1)
+            {
+                item.SetActive(true);
+            }
+
+            target.hoverText = "You need blood";
+            target.ID = 5;
+        }
+        else if (target.ID == 5 && gameManager.itemsAmount[3] >= 1)
+        {
+            foreach (GameObject item in target.gameObjects2)
+            {
+                item.SetActive(true);
+            }
+            target.hoverText = "";
+            target.ID = 6;
+            StartCoroutine(DemonEnding());
+        }
+        else if (target.ID == 6 && gameManager.itemsAmount[3] >= 1)
+        {
+            target.hoverText = "You need blood";
+            target.ID = 6;
+            gameManager.EndScene("You somehow killed yourself with the knife before finishing the ritual", 4);
+        }
+        IEnumerator DemonEnding()
+        {
+            yield return new WaitForSeconds(3);
+            gameManager.EndScene("You summoned a demon that flooded your house with blood", 3);
         }
         // skapar en ray cast och sedan kollar ifall targeten har ett script på sig som då sedan gör så vi kan läga till damage på det objektet som då vi kan ta bort det objektet
         //GameObject impactgo = Instantiate(pickupefect , hit.point, Quaternion.LookRotation(hit.normal));

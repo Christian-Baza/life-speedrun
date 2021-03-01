@@ -14,7 +14,6 @@ public class SaveScript : MonoBehaviour
     {
         for (int i = 0; i < EndingSquares.Length; i++)
         {
-            print(i);
             if (PlayerPrefs.GetInt("Ending " + (i + 1)) == 1)
             {
                 EndingSquares[i].GetComponent<Button>().interactable = true;
