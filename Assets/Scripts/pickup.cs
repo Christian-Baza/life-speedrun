@@ -67,6 +67,10 @@ public class pickup : MonoBehaviour
         {
             target.animator.SetTrigger("Open door");
         }
+        else if (target.ID == 5 && gameManager.itemsAmount[5] >= 5)
+        {
+            target.animator.SetTrigger("Open door");
+        }
         // skapar en ray cast och sedan kollar ifall targeten har ett script på sig som då sedan gör så vi kan läga till damage på det objektet som då vi kan ta bort det objektet
         //GameObject impactgo = Instantiate(pickupefect , hit.point, Quaternion.LookRotation(hit.normal));
         //Destroy(impactgo, 2f);
